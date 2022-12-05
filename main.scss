@@ -1,0 +1,227 @@
+// Override Bootstrap's Sass default variables
+//
+// Nearly all variables in Bootstrap are written with the `!default` flag.
+// This allows you to override the default values of those variables before
+// you import Bootstrap's source Sass files.
+//
+// Overriding the default variable values is the best way to customize your
+// CSS without writing _new_ styles. For example, change you can either change
+// `$body-color` or write more CSS that override's Bootstrap's CSS like so:
+// `body { color: red; }`.
+
+
+//
+// Bring in Bootstrap
+//
+
+// Option 1
+//
+// Import all of Bootstrap's CSS
+
+// @import "bootstrap/scss/bootstrap";
+
+// Option 2
+//
+// Import just the styles you need. Note that some stylesheets are required no matter what.
+
+@import "bootstrap/scss/functions"; // Required
+@import "bootstrap/scss/variables"; // Required
+@import "bootstrap/scss/mixins"; // Required
+
+//
+// Override Bootstrap here
+//
+
+// Toggle global options
+$enable-gradients: true;
+$enable-shadows: true;
+
+
+// @import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot"; // Required
+@import "bootstrap/scss/type";
+// @import "bootstrap/scss/images";
+// @import "bootstrap/scss/code";
+@import "bootstrap/scss/grid";
+// @import "bootstrap/scss/tables";
+// @import "bootstrap/scss/forms";
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/transitions";
+// @import "bootstrap/scss/dropdown";
+// @import "bootstrap/scss/button-group";
+// @import "bootstrap/scss/input-group"; // Requires forms
+// @import "bootstrap/scss/custom-forms";
+// @import "bootstrap/scss/nav";
+// @import "bootstrap/scss/navbar"; // Requires nav
+// @import "bootstrap/scss/card";
+// @import "bootstrap/scss/breadcrumb";
+// @import "bootstrap/scss/pagination";
+// @import "bootstrap/scss/badge";
+// @import "bootstrap/scss/jumbotron";
+// @import "bootstrap/scss/alert";
+// @import "bootstrap/scss/progress";
+// @import "bootstrap/scss/media";
+// @import "bootstrap/scss/list-group";
+@import "bootstrap/scss/close";
+// @import "bootstrap/scss/toasts";
+@import "bootstrap/scss/modal"; // Requires transitions
+// @import "bootstrap/scss/tooltip";
+// @import "bootstrap/scss/popover";
+// @import "bootstrap/scss/carousel";
+// @import "bootstrap/scss/spinners";
+@import "bootstrap/scss/utilities";
+// @import "bootstrap/scss/print";
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+ 
+  padding: 5rem 2.5rem;
+}
+.background{
+  background: rgb(8,56,67);
+  background: linear-gradient(180deg, rgba(8,56,67,1) 0%, rgba(26,92,106,1) 100%);
+}
+
+.bi {
+  fill: currentColor;
+}
+h1{
+    font-family:monospace;
+    font-weight: bolder;
+   color:#6c6a6a
+}
+h3{
+    padding: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    font-weight: bolder;
+    color:#6c6a6a
+}
+.bg-success {
+  background-color: #008661 !important;
+  color:#ffffff;
+}
+h4{
+  font-size: 17px;
+  font-weight: bold;
+  color:#6c6a6a
+}
+p{
+  font-size: 18px;
+  color:#6c6a6a;
+  font-weight: 400;
+}
+h6{
+  font-weight: bold;
+  font-style: oblique;
+}
+.container{
+  padding: 25px;
+  border-radius: 10px;
+  background: #F8F8F8;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.App-logo {
+  height: 30vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.qty{
+  color: black;
+  font-size: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: 10px 10px;
+  border-radius: 10px;
+  margin: 5px 0px;
+}
+
+@media only screen and (max-width: 600px) {
+div { 
+  width: 100%;
+  height: 100%;
+}
+.qty{
+  width: 50%;
+}
+nav{
+  height: 20%;
+}
+
+}
+
+@media only screen and (min-width: 600px) {
+div { 
+  width: 100%;
+  height: 100%;
+}
+.qty{
+  width: 50%;
+}
+nav{
+  height: 19%;
+}
+}
+
+@media only screen and (min-width: 768px) {
+div { 
+  width: 100%;
+  height: 100%;
+  
+}
+.qty{
+  width: 60%;
+}
+nav{
+  height: 16%;
+}
+} 
+
+
+@media only screen and (min-width: 992px) {
+div { 
+  width: 100%;
+  height: 100%;
+  
+}
+.qty{
+  width: 80%;
+
+}
+nav{
+  height: 13%;
+}
+} 
+
+
+@media only screen and (min-width: 1200px) {
+div { 
+  width: 100%;
+  height: 100%;
+  
+}
+.qty{
+  width: 75%;
+}
+nav{
+  height: 8%;
+}
+}
